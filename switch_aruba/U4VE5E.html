@@ -513,38 +513,17 @@
   </section>
   <div style="height: 32px;"></div>
   </main>
-
-    <!-- FOOTER -->
-    <footer class="bg-[#0888b4] text-white pt-8 pb-2">
-    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-        <h2 class="font-bold text-lg mb-2">DS3 Comunicaciones</h2>
-        <p>Líder en soluciones de redes y comunicaciones en Perú.<br>Ofrecemos productos para WiFi y extensión de señal.</p>
-        </div>
-        <div>
-        <h2 class="font-bold text-lg mb-2">Enlaces rápidos</h2>
-        <ul class="space-y-1">
-            <li><a href="/" class="hover:underline">Inicio</a></li>
-            <li><a href="#" class="hover:underline">MikroTik</a></li>
-            <li><a href="#" class="hover:underline">Cisco</a></li>
-            <li><a href="#" class="hover:underline">Realizar Pedido</a></li>
-        </ul>
-        </div>
-        <div>
-        <h2 class="font-bold text-lg mb-2">Contacto</h2>
-        <ul class="space-y-1">
-            <li class="flex items-center"><i class="fa-solid fa-envelope mr-2 text-white"></i> netperu100@hotmail.com</li>
-            <li class="flex items-center"><i class="fa-solid fa-phone mr-2 text-white"></i> 533-4339 / 994-428-965</li>
-            <li class="flex items-center"><i class="fa-solid fa-phone mr-2 text-white"></i> 99653-3223 / 937-514-867</li>
-            <li class="flex items-center"><i class="fa-solid fa-location-dot mr-2 text-white"></i> Lima, Perú</li>
-        </ul>
-        </div>
-    </div>
-    <div class="text-center text-white text-sm mt-6 pt-2 border-t border-white/20">
-        © 2024 DS3 Comunicaciones EIRL. Todos los derechos reservados.
-    </div>
-    </footer>
-
+    <!-- FOOTER (componente) -->
+  <footer class="bg-[#0888b4] text-white pt-8 pb-2">
+      <div id="footer-content"></div>
+      <script>
+        fetch('../components/footer.html')
+          .then(res => res.text())
+          .then(html => {
+            document.getElementById('footer-content').innerHTML = html;
+          });
+      </script>
+  </footer>
   <!-- Modal optimizado para imágenes -->
   <div id="image-modal" class="fixed hidden inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4 fade-in">
     <span class="absolute top-4 right-4 text-white text-3xl cursor-pointer hover:text-gray-300 transition-colors duration-200 z-10"
