@@ -30,7 +30,6 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Lista de Precios Productos HPE" />
   <meta name="twitter:description" content="Lista de Precios Productos HPE en Perú. Switches, Servidores, Access Points, Transceivers, Discos Duros, Fuentes de Poder y más." />
-  <meta name="twitter:image" content="https://www.ds3comunicaciones.com/ProductosHPE/images/logoDs3.jpg" />
   
   <!-- Meta Tags para Productos -->
   <meta name="product:price:amount" content="199.00" />
@@ -261,14 +260,91 @@
 
 <body class="bg-gris-muy-claro">
   <!-- HEADER DINÁMICO -->
-  <div id="header-container"></div>
-  <script>
-    fetch('header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header-container').innerHTML = data;
-      });
-  </script>
+  <header class="bg-white border-b border-gris-claro shadow-sm">
+    <!-- Mobile header -->
+    <div class="max-w-7xl w-full mx-auto flex items-center justify-between p-4 md:hidden">
+      <div class="flex gap-3 items-center">
+        <i class="cursor-pointer fa-solid fa-bars text-2xl btn_navi"></i>
+        <div class="flex flex-col">
+          <div class="flex items-end gap-3">
+            <img src="../images/logoDs3.jpg" alt="DS3 Comunicaciones" class="max-w-[150px] h-16 object-contain" />
+            <img src="../images/hpe_logo.jpg" alt="HPE" class="max-w-[120px] h-14 object-contain" />
+          </div>
+          <div class="flex flex-col gap-1 mt-2 text-gris-medio md:hidden">
+            <div class="flex flex-row items-center gap-4">
+              <span class="flex items-center gap-2"><i class="fa-solid fa-phone" style="color:#333; font-size:14px;"></i> <span style="color:#333; font-size:16px;">994-428-965</span></span>
+              <span class="flex items-center gap-2"><i class="fa-solid fa-phone" style="color:#333; font-size:14px;"></i> <span style="color:#333; font-size:16px;">996-533-223</span></span>
+            </div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-envelope" style="color:#333; font-size:14px;"></i> <span style="color:#333; font-size:16px;">netperu100@hotmail.com</span></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <i class="cursor-pointer fa-solid fa-magnifying-glass p-3 bg-gris-muy-claro rounded-md border hover:bg-gris-claro text-xl" id="active_search"></i>
+      </div>
+    </div>
+
+    <!-- Buscador móvil oculto por defecto -->
+<div id="sec_search" class="fixed top-0 left-0 w-full h-full z-[9999] flex flex-col items-center" style="backdrop-filter: blur(12px); background: rgba(255,255,255,0.5); display:none !important; z-index:9999 !important;">
+      <div class="w-full max-w-xs px-4 pt-8 relative">
+        <form action="https://www.ds3comunicaciones.com/find.html" method="GET" target="_blank" class="w-full">
+          <div class="relative flex items-center">
+            <span class="absolute left-3 text-gris-medio"><i class="fas fa-search"></i></span>
+            <input 
+              type="search" 
+              name="q" 
+              placeholder="Buscar" 
+              class="w-full px-10 py-3 pr-12 text-gris-oscuro bg-white/80 border border-gris-claro rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500 shadow-md"
+              required
+            />
+            <button type="button" id="desactive_search" class="absolute right-2 text-gris-medio hover:text-red-500 text-2xl cursor-pointer flex items-center justify-center bg-transparent border-none p-0 h-8 w-8"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <input type="hidden" name="cx" value="partner-pub-9265252540298851:f2549i3fi60" />
+          <input type="hidden" name="cof" value="FORID:10" />
+          <input type="hidden" name="ie" value="ISO-8859-1" />
+          <input type="hidden" name="sa" value="Buscar" />
+        </form>
+      </div>
+    </div>
+    <!-- Desktop header -->
+    <div class="max-w-7xl mx-auto px-4 py-3 hidden md:flex flex-row items-center gap-8">
+      <div class="flex items-center" style="min-height:80px;">
+        <img src="./images/logoDs3.jpg" alt="DS3 Comunicaciones" class="h-20 w-auto mr-6" style="max-height:80px;" fetchpriority="high" loading="eager" />
+      </div>
+      <div class="flex flex-wrap justify-center items-center gap-6 text-sm flex-1">
+        <div class="flex flex-row items-center gap-2 text-gris-medio min-w-[180px]">
+          <i class="fas fa-phone" style="color:#333; font-weight:bold; font-size:16px;"></i>
+          <div class="flex flex-col">
+            <span style="color:#333; font-weight:bold;">553-4339</span>
+            <span style="color:#333; font-weight:bold;">994-428-965</span>
+          </div>
+        </div>
+        <div class="flex flex-row items-center gap-2 text-gris-medio min-w-[180px]">
+          <i class="fas fa-phone" style="color:#333; font-weight:bold; font-size:16px;"></i>
+          <div class="flex flex-col">
+            <span style="color:#333; font-weight:bold;">99653-3223</span>
+            <span style="color:#333; font-weight:bold;">937-514-867</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 text-gris-medio min-w-[120px]" style="align-items:baseline;">
+          <i class="fas fa-envelope mr-1" style="color:#333; font-weight:bold; font-size:16px;"></i>
+          <span style="color:#333; font-weight:bold;">netperu100@hotmail.com</span>
+        </div>
+        <div class="flex items-center gap-2 text-gris-medio">
+          <i class="fas fa-map-marker-alt" style="color:#333; font-weight:bold;"></i>
+          <span style="color:#333; font-weight:bold;">Lima, PERÚ</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="flex items-center" style="min-height:80px;">
+          <img src="./images/hpe_logo.jpg" alt="HPE" class="h-20 w-auto" style="max-height:80px;" fetchpriority="high" loading="eager" />
+        </div>
+        <div class="flex items-center">
+          <i class="cursor-pointer fa-solid fa-magnifying-glass p-3 bg-gris-muy-claro rounded-md border hover:bg-gris-claro text-xl" id="active_search"></i>
+        </div>
+      </div>
+    </div>
+  </header>
     <style>
     /* Forzar el modal de búsqueda a mostrarse correctamente en desktop */
     #sec_search[style*="display: flex"], #sec_search.show {
@@ -461,25 +537,25 @@
 <nav class="bg-white border-b border-gray-200 shadow-sm">
   <div class="relative">
     <div class="nav-container flex justify-evenly overflow-x-auto md:py-2 px-4 space-x-2 scrollbar-hide">
-      <a href="../switch_instantOn/precios_instantOn.html" class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
+      <a href="./switch_instantOn/precios_instantOn.html" class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
         <div class="icon-container h-6 w-6 flex items-center justify-center">
-          <img src="../icons/ccr.ico" class="nav-icon max-h-full max-w-full" alt="CCR" />
+          <img src="./icons/ccr.ico" class="nav-icon max-h-full max-w-full" alt="CCR" />
         </div>
         <span class="text-xs font-medium text-gray-600 whitespace-nowrap">Switch Instant On</span>
       </a>
-      <a href="../switch_aruba/precios_switch_aruba.html" class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
+      <a href="./switch_aruba/precios_switch_aruba.html" class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
         <div class="icon-container h-6 w-6 flex items-center justify-center">
           <img src="../icons/RouterBoard.ico" class="nav-icon max-h-full max-w-full" alt="RouterBoard" />
         </div>
         <span class="text-xs font-medium text-gray-600 whitespace-nowrap">Switch Aruba</span>
       </a>
-      <a href="../ap_aruba/precios_ap_aruba.html" class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
+      <a href="./ap_aruba/precios_ap_aruba.html" class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
         <div class="icon-container h-6 w-6 flex items-center justify-center">
           <img src="../icons/crs.ico" class="nav-icon max-h-full max-w-full" alt="Switch CRS" />
         </div>
         <span class="text-xs font-medium text-gray-600 whitespace-nowrap">Access Point Aruba</span>
       </a>
-      <a href="../servidores/precios_servidores.html" class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
+      <a href="./servidores/precios_servidores.html" class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
         <div class="icon-container h-6 w-6 flex items-center justify-center">
           <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M21 42C32.598 42 42 32.598 42 21C42 9.40202 32.598 0 21 0C9.40202 0 0 9.40202 0 21C0 32.598 9.40202 42 21 42Z" fill="white" stroke="black" stroke-width="2" />
@@ -489,21 +565,21 @@
         </div>
         <span class="text-xs font-medium text-gray-600 whitespace-nowrap">Servidores ProLiant</span>
       </a>
-      <a href="../transceiver/precios_transceiver.html" class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
+      <a href="./transceiver/precios_transceiver.html" class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
         <div class="icon-container h-6 w-6 flex items-center justify-center">
-          <img src="../icons/transceiver.ico" class="nav-icon max-h-full max-w-full" alt="Transceiver" />
+          <img src="./icons/transceiver.ico" class="nav-icon max-h-full max-w-full" alt="Transceiver" />
         </div>
         <span class="text-xs font-medium text-gray-600 whitespace-nowrap">Transceivers y Fibra</span>
       </a>
-      <a href="../discos/precios_discos.html" class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
+      <a href="./discos/precios_discos.html" class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
         <div class="icon-container h-6 w-6 flex items-center justify-center">
-          <img src="../icons/disco_duro.ico" class="nav-icon max-h-full max-w-full" alt="Disco Duro" />
+          <img src="./icons/disco_duro.ico" class="nav-icon max-h-full max-w-full" alt="Disco Duro" />
         </div>
         <span class="text-xs font-medium text-gray-600 whitespace-nowrap">Discos Duros</span>
       </a>
-      <a href="../fuentesPoder/precios_fuentes.html" class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
+      <a href="./fuentesPoder/precios_fuentes.html" class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
         <div class="icon-container h-6 w-6 flex items-center justify-center">
-          <img src="../icons/fuentes.ico" class="nav-icon max-h-full max-w-full" alt="Fuentes de Poder" />
+          <img src="./icons/fuentes.ico" class="nav-icon max-h-full max-w-full" alt="Fuentes de Poder" />
         </div>
         <span class="text-xs font-medium text-gray-600 whitespace-nowrap">Fuentes de Poder</span>
       </a>
