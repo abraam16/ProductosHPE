@@ -9,6 +9,19 @@
     padding-right: 2.5rem !important;
   }
 }
+
+/* Prevenir overflow horizontal global */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100%;
+}
+
+/* Asegurar que los contenedores no se desborden */
+.max-w-7xl, .container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* Ocultar barra de scroll solo en el aside derecho de listas de precios */
 aside.sticky.overflow-y-auto.scrollbar-hide {
   overflow-y: visible !important;

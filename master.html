@@ -144,7 +144,13 @@
   <!-- Critical CSS Expandido - EVITA FOUC -->
   <style>
     /* CSS Crítico para evitar FOUC */
-    body { font-family: system-ui, -apple-system, sans-serif; }
+    body { 
+      font-family: system-ui, -apple-system, sans-serif; 
+      overflow-x: hidden; /* Evita scroll horizontal */
+    }
+    html {
+      overflow-x: hidden; /* Evita scroll horizontal a nivel de html */
+    }
     .border { border-width: 1px; }
     .rounded-lg { border-radius: 0.5rem; }
     .shadow-sm { box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); }
@@ -267,8 +273,8 @@
         <i class="cursor-pointer fa-solid fa-bars text-2xl btn_navi"></i>
         <div class="flex flex-col">
           <div class="flex items-end gap-3">
-            <img src="../images/logoDs3.jpg" alt="DS3 Comunicaciones" class="max-w-[150px] h-16 object-contain" />
-            <img src="../images/hpe_logo.jpg" alt="HPE" class="max-w-[120px] h-14 object-contain" />
+            <img src="./images/logoDs3.jpg" alt="DS3 Comunicaciones" class="max-w-[150px] h-16 object-contain" />
+            <img src="./images/hpe_logo.jpg" alt="HPE" class="max-w-[120px] h-14 object-contain" />
           </div>
           <div class="flex flex-col gap-1 mt-2 text-gris-medio md:hidden">
             <div class="flex flex-row items-center gap-4">
@@ -536,7 +542,7 @@
 <!-- SUBMENU DE MARCA DEPENDIENDO DEL PRODUCTO -->
 <nav class="bg-white border-b border-gray-200 shadow-sm">
   <div class="relative">
-    <div class="nav-container flex justify-evenly overflow-x-auto md:py-2 px-4 space-x-2 scrollbar-hide">
+    <div class="nav-container flex justify-evenly overflow-x-hidden md:py-2 px-4 space-x-2">
       <a href="./switch_instantOn/precios_instantOn.html" class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
         <div class="icon-container h-6 w-6 flex items-center justify-center">
           <img src="./icons/ccr.ico" class="nav-icon max-h-full max-w-full" alt="CCR" />
@@ -587,7 +593,7 @@
   </div>
 </nav>
   <!-- BREADCRUMB -->
-   <div class="border-b px-3 py-2 text-xs md:text-sm text-slate-600 flex flex-nowrap items-center gap-1 overflow-x-auto scrollbar-hide whitespace-nowrap bg-white">
+   <div class="border-b px-3 py-2 text-xs md:text-sm text-slate-600 flex flex-nowrap items-center gap-1 overflow-x-hidden bg-white">
     <a href="https://www.ds3comunicaciones.com/index.html" class="flex-shrink-0 hover:text-blue-600">
       <i class="fa-solid fa-house text-[0.9em]"></i>
     </a>
