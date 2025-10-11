@@ -154,194 +154,288 @@
         <div class="w-full flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <div class="ds3-blue titulo-ds3" id="AirFiber">Lista de Precios HPE Switch Instant On</div>
           <div class="flex justify-center sm:justify-end w-full sm:w-auto mt-2 sm:mt-0">
-            <select id="sortPrice" class="border border-gray-300 rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 w-full sm:w-auto text-base sm:text-sm py-3 sm:py-1 mb-4 sm:mb-0">
-              <option value="asc">Precio: menor a mayor</option>
-              <option value="desc">Precio: mayor a menor</option>
+            <select id="familyNavigator" class="border border-gray-300 rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 w-full sm:w-auto text-base sm:text-sm py-3 sm:py-1 mb-4 sm:mb-0">
+              <option value="">Ir a una familia específica</option>
+              <option value="familia1930">Familia 1930 - Switches Gestionables</option>
+              <option value="familia1960">Familia 1960 - Switches Apilables</option>
+              <option value="familia1830">Familia 1830 - Switches Básicos</option>
+              <option value="familia1430">Familia 1430 - Switches No Gestionados</option>
+              <option value="familiaSecure">Familia Secure Gateway</option>
             </select>
           </div>
         </div>
       </div>
-      <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        <a href="JL810A.html" class="block" data-price="165">
-        <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JL810A_front_small.png" alt="JL810A" class="h-32 object-contain mb-3 z-10">
-            <p class="font-bold text-center z-10">JL810A</p>
-            <span class="font-medium text-sm mb-2 z-10">U$ 165</span>
-            <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
-            <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 8p Gigabit 1830</p>
-            </div>
+
+      <!-- FAMILIA ARUBA INSTANT ON 1930 -->
+      <div class="mb-6 mt-0" id="familia1930">
+        <div class="bg-gradient-to-r from-blue-800 to-blue-900 p-4 rounded-t-lg">
+          <h2 class="text-xl font-bold mb-2 text-gray-800" style="color: #374151 !important;">Familia Aruba Instant On 1930</h2>
+          <p class="text-gray-600 text-sm" style="color: #4b5563 !important;">La serie 1930 se enfoca en switches gestionables de capa 2/3 Lite con opciones de 8, 24 y 48 puertos, y puertos SFP/SFP+ de alta velocidad.</p>
         </div>
-        </a>
-        <a href="R8R47A.html" class="block" data-price="207">
-        <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/R8R47A_front_small.png" alt="R8R47A" class="h-32 object-contain mb-3 z-10">
-            <p class="font-bold text-center z-10">R8R47A</p>
-            <span class="font-medium text-sm mb-2 z-10">U$ 207</span>
-            <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
-            <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 16p Gigabit 1430</p>
-            </div>
+        <div class="bg-white border border-t-0 rounded-b-lg p-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- JL680A - 8p Gigabit, 2p SFP -->
+            <a href="JL680A.html" class="block" data-price="143.90">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/JL680A_front_small.png" alt="JL680A" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">JL680A</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 143.90</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 8p Gigabit 2p SFP 1930</p>
+                </div>
+              </div>
+            </a>
+
+            <!-- JL681A - 8p Gigabit CL4 PoE, 2p SFP (124W) -->
+            <a href="JL681A.html" class="block" data-price="255">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/JL681A_front_small.png" alt="JL681A" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">JL681A</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 255</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 8p Gigabit CL4 PoE 2p SFP 124W 1930</p>
+                </div>
+              </div>
+            </a>
+
+            <!-- JL682A - 24p Gigabit, 4p SFP+ -->
+            <a href="JL682A.html" class="block" data-price="307">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/JL682A_front_small.png" alt="JL682A" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">JL682A</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 307</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 24p Gigabit 4p SFP+ 1930</p>
+                </div>
+              </div>
+            </a>
+
+            <!-- JL682A-B - 24p Gigabit, 4p SFP+ (variante) -->
+            <a href="JL682A-B.html" class="block" data-price="287">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/JL682A-B_front_small.png" alt="JL682A-B" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">JL682A-B</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 287</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">Switch Administrable HP Aruba 1930 24G 4 SFP/SFP+ Capa 3 (JL682A)</p>
+                </div>
+              </div>
+            </a>
+
+
+            <!-- JL683B - 24p Gigabit CL4 PoE, 4p SFP+ (195W) -->
+            <a href="JL683B.html" class="block" data-price="545">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/JL683B_front_small.png" alt="JL683B" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">JL683B</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 545</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 24p Gigabit CL4 PoE 4p SFP+ 195W 1930</p>
+                </div>
+              </div>
+            </a>
+
+            <!-- JL684B - 24p Gigabit CL4 PoE, 4p SFP+ (370W) -->
+            <a href="JL684B.html" class="block" data-price="677">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/JL684B_front_small.png" alt="JL684B" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">JL684B</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 677</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">24p Gigabit CL4 PoE, 4p SFP+ (370W)</p>
+                </div>
+              </div>
+            </a>
+
+            <!-- JL685A - 48p Gigabit, 4p SFP+ -->
+            <a href="JL685A.html" class="block" data-price="515">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/JL685A_front_small.png" alt="JL685A" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">JL685A</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 515</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 48p Gigabit 4p SFP+ 1930</p>
+                </div>
+              </div>
+            </a>
+
+            <!-- JL686B - 48p Gigabit CL4 PoE, 4p SFP+ (370W) -->
+            <a href="JL686B.html" class="block" data-price="977.90">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/JL686B_front_small.png" alt="JL686B" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">JL686B</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 977.90</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 48p Gigabit CL4 PoE 4p SFP+ 370W 1930</p>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
-        </a>
-        <a href="JL682A.html" class="block" data-price="307">
-        <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JL682A_front_small.png" alt="JL682A" class="h-32 object-contain mb-3 z-10">
-            <p class="font-bold text-center z-10">JL682A</p>
-            <span class="font-medium text-sm mb-2 z-10">U$ 307</span>
-            <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
-            <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 24p Gigabit 4p SFP+ 1930</p>
-            </div>
+      </div>
+
+      <!-- FAMILIA ARUBA INSTANT ON 1960 -->
+      <div class="mb-6" id="familia1960">
+        <div class="bg-gradient-to-r from-green-700 to-green-800 p-4 rounded-t-lg">
+          <h2 class="text-xl font-bold mb-2 text-gray-800" style="color: #374151 !important;">Familia Aruba Instant On 1960</h2>
+          <p class="text-gray-600 text-sm" style="color: #4b5563 !important;">La serie 1960 es una familia de switches apilables (stacking) con puertos de 10 Gigabit Ethernet (10GBASE-T y SFP+), diseñados para un mayor rendimiento.</p>
         </div>
-        </a>
-        <a href="JL812A.html" class="block" data-price="325">
-        <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JL812A_front_small.png" alt="JL812A" class="h-32 object-contain mb-3 z-10">
-            <p class="font-bold text-center z-10">JL812A</p>
-            <span class="font-medium text-sm mb-2 z-10">U$ 325</span>
-            <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
-            <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 24p Gigabit 2p SFP 1830</p>
-            </div>
+        <div class="bg-white border border-t-0 rounded-b-lg p-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- JL806A - 24p Gigabit, 2p 10GBT, 2p SFP+ -->
+            <a href="JL806A.html" class="block" data-price="767">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/JL806A_front_small.png" alt="JL806A" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">JL806A</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 767</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 24p Gigabit 2p 10GBT 2p SFP+ 1960</p>
+                </div>
+              </div>
+            </a>
+
+            <!-- JL807A - 24p Gigabit PoE (370W), 2p 10GBT, 2p SFP+ -->
+            <a href="JL807A.html" class="block" data-price="1,433">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/JL807A_front_small.png" alt="JL807A" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">JL807A</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 1,433</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 24p Gigabit CL4 PoE 2p 10GBT 2p SFP+ 370W 1960</p>
+                </div>
+              </div>
+            </a>
+
+            <!-- JL808A - 48p Gigabit, 2p 10GBT, 2p SFP+ -->
+            <a href="JL808A.html" class="block" data-price="1,555">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/JL808A_front_small.png" alt="JL808A" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">JL808A</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 1,555</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 48p Gigabit 2p 10GBT 2p SFP+ 1960</p>
+                </div>
+              </div>
+            </a>
+
+            <!-- JL809A - 40p Gigabit CL4 + 8p CL6 PoE (600W), 2p 10GBT, 2p SFP+ -->
+            <a href="JL809A.html" class="block" data-price="1,885">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/JL809A_front_small.png" alt="JL809A" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">JL809A</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 1,885</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 48p Gigabit CL4+CL6 PoE 2p 10GBT 2p SFP+ 600W 1960</p>
+                </div>
+              </div>
+            </a>
+
+            <!-- JL805A - 12p 10GBT, 4p SFP+ (Switch de agregación/core) -->
+            <a href="JL805A.html" class="block" data-price="1,995">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/JL805A_front_small.png" alt="JL805A" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">JL805A</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 1,995</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 12p 10GBT 4p SFP+ 1960</p>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
-        </a>
-        <a href="JL813A.html" class="block" data-price="429">
-        <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JL813A_front_small.png" alt="JL813A" class="h-32 object-contain mb-3 z-10">
-            <p class="font-bold text-center z-10">JL813A</p>
-            <span class="font-medium text-sm mb-2 z-10">U$ 429</span>
-            <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
-            <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 24p Gigabit CL4 PoE 2p SFP 195W 1830</p>
-            </div>
+      </div>
+
+      <!-- FAMILIA ARUBA INSTANT ON 1830 -->
+      <div class="mb-6" id="familia1830">
+        <div class="bg-gradient-to-r from-orange-600 to-orange-700 p-4 rounded-t-lg">
+          <h2 class="text-xl font-bold mb-2 text-gray-800" style="color: #374151 !important;">Familia Aruba Instant On 1830</h2>
+          <p class="text-gray-600 text-sm" style="color: #4b5563 !important;">La serie 1830 representa la opción más básica y económica, ofreciendo switches de Capa 2 con gestión inteligente (Smart Managed) sin la capacidad de apilamiento (stacking).</p>
         </div>
-        </a>
-        <a href="JL683B.html" class="block" data-price="545">
-        <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JL683B_front_small.png" alt="JL683B" class="h-32 object-contain mb-3 z-10">
-            <p class="font-bold text-center z-10">JL683B</p>
-            <span class="font-medium text-sm mb-2 z-10">U$ 545</span>
-            <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
-            <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 24p Gigabit CL4 PoE 4p SFP+ 195W 1930</p>
-            </div>
+        <div class="bg-white border border-t-0 rounded-b-lg p-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- JL810A - 8p Gigabit -->
+            <a href="JL810A.html" class="block" data-price="165">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/JL810A_front_small.png" alt="JL810A" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">JL810A</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 165</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 8p Gigabit 1830</p>
+                </div>
+              </div>
+            </a>
+
+            <!-- JL812A - 24p Gigabit, 2p SFP -->
+            <a href="JL812A.html" class="block" data-price="325">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/JL812A_front_small.png" alt="JL812A" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">JL812A</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 325</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 24p Gigabit 2p SFP 1830</p>
+                </div>
+              </div>
+            </a>
+
+            <!-- JL813A - 24p Gigabit CL4 PoE, 2p SFP (195W) -->
+            <a href="JL813A.html" class="block" data-price="429">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/JL813A_front_small.png" alt="JL813A" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">JL813A</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 429</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 24p Gigabit CL4 PoE 2p SFP 195W 1830</p>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
-        </a>
-        <a href="JL684B.html" class="block" data-price="677">
-        <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JL684B_front_small.png" alt="JL684B" class="h-32 object-contain mb-3 z-10">
-            <p class="font-bold text-center z-10">JL684B</p>
-            <span class="font-medium text-sm mb-2 z-10">U$ 677</span>
-            <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
-            <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 24p Gigabit CL4 PoE 4p SFP+ 370W 1930</p>
-            </div>
+      </div>
+
+      <!-- FAMILIA ARUBA INSTANT ON 1430 -->
+      <div class="mb-6" id="familia1430">
+        <div class="bg-gradient-to-r from-purple-600 to-purple-700 p-4 rounded-t-lg">
+          <h2 class="text-xl font-bold mb-2 text-gray-800" style="color: #374151 !important;">Familia Aruba Instant On 1430</h2>
+          <p class="text-gray-600 text-sm" style="color: #4b5563 !important;">La serie 1430 es la línea de switches no gestionados (unmanaged) de Instant On, ideales para una conectividad plug-and-play simple.</p>
         </div>
-        </a>
-        <a href="JL686B.html" class="block" data-price="977.90">
-        <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JL686B_front_small.png" alt="JL686B" class="h-32 object-contain mb-3 z-10">
-            <p class="font-bold text-center z-10">JL686B</p>
-            <span class="font-medium text-sm mb-2 z-10">U$ 977.90</span>
-            <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
-            <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 48p Gigabit CL4 PoE 4p SFP+ 370W 1930</p>
-            </div>
+        <div class="bg-white border border-t-0 rounded-b-lg p-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- R8R47A - 16p Gigabit -->
+            <a href="R8R47A.html" class="block" data-price="207">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/R8R47A_front_small.png" alt="R8R47A" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">R8R47A</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 207</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 16p Gigabit 1430</p>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
-        </a>
-        <a href="JL807A.html" class="block" data-price="1,433">
-        <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JL807A_front_small.png" alt="JL807A" class="h-32 object-contain mb-3 z-10">
-            <p class="font-bold text-center z-10">JL807A</p>
-            <span class="font-medium text-sm mb-2 z-10">U$ 1,433</span>
-            <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
-            <p class="text-xs text-gray-600 text-center font-bold">Switch Administrable Aruba Instant On 1960 24G 2XGT 2SFP+ PoE 370 W (JL807A)</p>
-            </div>
+      </div>
+
+      <!-- FAMILIA ARUBA INSTANT ON SECURE GATEWAY -->
+      <div class="mb-6" id="familiaSecure">
+        <div class="bg-gradient-to-r from-red-600 to-red-700 p-4 rounded-t-lg">
+          <h2 class="text-xl font-bold mb-2 text-gray-800" style="color: #374151 !important;">Familia Aruba Instant On Secure Gateway</h2>
+          <p class="text-gray-600 text-sm" style="color: #4b5563 !important;">Este es un dispositivo diferente a un switch tradicional. El Secure Gateway combina funciones de firewall/router con conectividad Instant On.</p>
         </div>
-        </a>
-        <a href="JL805A.html" class="block" data-price="1,995">
-        <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JL805A_front_small.png" alt="JL805A" class="h-32 object-contain mb-3 z-10">
-            <p class="font-bold text-center z-10">JL805A</p>
-            <span class="font-medium text-sm mb-2 z-10">U$ 1,995</span>
-            <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
-            <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 12p 10GBT 4p SFP+ 1960</p>
-            </div>
+        <div class="bg-white border border-t-0 rounded-b-lg p-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- S0G34A - 5p SmartRate 2.5G PoE+ (64W) SG2505P -->
+            <a href="S0G34A.html" class="block" data-price="consultar">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/S0G34A_front_small.png" alt="S0G34A" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">S0G34A</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ consultar</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">HPE Aruba Instant On Secure Gateway 5p SmartRate 2.5G PoE+ 64W SG2505P</p>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
-        </a>
-        <a href="JL680A.html" class="block" data-price="143.90">
-        <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JL680A_front_small.png" alt="JL680A" class="h-32 object-contain mb-3 z-10">
-            <p class="font-bold text-center z-10">JL680A</p>
-            <span class="font-medium text-sm mb-2 z-10">U$ 143.90</span>
-            <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
-            <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 8p Gigabit 2p SFP 1930</p>
-            </div>
-        </div>
-        </a>
-        <a href="JL681A.html" class="block" data-price="255">
-        <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JL681A_front_small.png" alt="JL681A" class="h-32 object-contain mb-3 z-10">
-            <p class="font-bold text-center z-10">JL681A</p>
-            <span class="font-medium text-sm mb-2 z-10">U$ 255</span>
-            <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
-            <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 8p Gigabit CL4 PoE 2p SFP 124W 1930</p>
-            </div>
-        </div>
-        </a>
-        <a href="JL682A-B.html" class="block" data-price="287">
-        <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JL682A-B_front_small.png" alt="JL682A-B" class="h-32 object-contain mb-3 z-10">
-            <p class="font-bold text-center z-10">JL682A-B</p>
-            <span class="font-medium text-sm mb-2 z-10">U$ 287</span>
-            <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
-            <p class="text-xs text-gray-600 text-center font-bold">Switch Administrable HP Aruba 1930 24G 4 SFP/SFP+ Capa 3 (JL682A)</p>
-            </div>
-        </div>
-        </a>
-        <a href="JL685A.html" class="block" data-price="515">
-        <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JL685A_front_small.png" alt="JL685A" class="h-32 object-contain mb-3 z-10">
-            <p class="font-bold text-center z-10">JL685A</p>
-            <span class="font-medium text-sm mb-2 z-10">U$ 515</span>
-            <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
-            <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 48p Gigabit 4p SFP+ 1930</p>
-            </div>
-        </div>
-        </a>
-        <a href="JL806A.html" class="block" data-price="767">
-        <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JL806A_front_small.png" alt="JL806A" class="h-32 object-contain mb-3 z-10">
-            <p class="font-bold text-center z-10">JL806A</p>
-            <span class="font-medium text-sm mb-2 z-10">U$ 767</span>
-            <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
-            <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 24p Gigabit 2p 10GBT 2p SFP+ 1960</p>
-            </div>
-        </div>
-        </a>
-        <a href="JL808A.html" class="block" data-price="1,555">
-        <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JL808A_front_small.png" alt="JL808A" class="h-32 object-contain mb-3 z-10">
-            <p class="font-bold text-center z-10">JL808A</p>
-            <span class="font-medium text-sm mb-2 z-10">U$ 1,555</span>
-            <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
-            <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 48p Gigabit 2p 10GBT 2p SFP+ 1960</p>
-            </div>
-        </div>
-        </a>
-        <a href="JL809A.html" class="block" data-price="1,885">
-        <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JL809A_front_small.png" alt="JL809A" class="h-32 object-contain mb-3 z-10">
-            <p class="font-bold text-center z-10">JL809A</p>
-            <span class="font-medium text-sm mb-2 z-10">U$ 1,885</span>
-            <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
-            <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 40p Gigabit CL4 8p Gigabit CL6 PoE 2p 10GBT 2p SFP+ 600W 1960</p>
-            </div>
-        </div>
-        </a>
-        <a href="S0G34A.html" class="block" data-price="consultar">
-        <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/S0G34A_front_small.png" alt="S0G34A" class="h-32 object-contain mb-3 z-10">
-            <p class="font-bold text-center z-10">S0G34A</p>
-            <span class="font-medium text-sm mb-2 z-10">U$ consultar</span>
-            <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
-            <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Secure Gateway 5‑port SmartRate 2.5G PoE+ 64W SG2505P</p>
-            </div>
-        </div>
-        </a>
       </div>
     </div>
 
@@ -519,39 +613,38 @@
   <!-- JavaScript Optimizado para Máximo Rendimiento -->
   <script>
     let elements = {};
-    // Ordenar productos CCR por precio
-    function sortProductsCCR(order) {
-      const grid = document.getElementById('productGrid');
-      if (!grid) return;
-      // Selecciona todos los productos (enlaces directos hijos del grid)
-      const products = Array.from(grid.querySelectorAll('a[data-price]'));
-      products.sort((a, b) => {
-        let priceA = a.getAttribute('data-price');
-        let priceB = b.getAttribute('data-price');
-        
-        // Manejar precios no numéricos (como "consultar")
-        if (priceA === 'consultar') priceA = 999999;
-        else priceA = parseFloat(priceA.replace(/,/g, ''));
-        
-        if (priceB === 'consultar') priceB = 999999;
-        else priceB = parseFloat(priceB.replace(/,/g, ''));
-        
-        return order === 'asc' ? priceA - priceB : priceB - priceA;
-      });
-      // Elimina y re-agrega en el nuevo orden
-      products.forEach(p => grid.appendChild(p));
+    
+    // Función para navegar a una familia específica
+    function navigateToFamily(familyId) {
+      if (familyId) {
+        const familyElement = document.getElementById(familyId);
+        if (familyElement) {
+          familyElement.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+          });
+          // Agregar un efecto visual temporal
+          familyElement.style.boxShadow = '0 0 20px rgba(59, 130, 246, 0.5)';
+          setTimeout(() => {
+            familyElement.style.boxShadow = '';
+          }, 2000);
+        }
+      }
     }
 
     document.addEventListener('DOMContentLoaded', function() {
-      // Orden inicial ascendente
-      sortProductsCCR('asc');
-      // Evento de cambio en el select
-      const sortSelect = document.getElementById('sortPrice');
-      if (sortSelect) {
-        sortSelect.addEventListener('change', function() {
-          sortProductsCCR(this.value);
+      // Evento de cambio en el selector de familias
+      const familyNavigator = document.getElementById('familyNavigator');
+      if (familyNavigator) {
+        familyNavigator.addEventListener('change', function() {
+          navigateToFamily(this.value);
+          // Resetear el selector después de la navegación
+          setTimeout(() => {
+            this.value = '';
+          }, 100);
         });
       }
+      
       elements.modal = document.getElementById('image-modal');
       elements.modalImg = document.getElementById('modal-image');
       elements.mainImg = document.getElementById('img_main');
