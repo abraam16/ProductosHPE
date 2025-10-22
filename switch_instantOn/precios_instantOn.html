@@ -205,9 +205,9 @@
     
     /* Grid de productos */
     .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
     }
     
     /* Ocultar elementos innecesarios de las tarjetas antiguas */
@@ -215,7 +215,8 @@
     
     /* Títulos de familia cuando se filtran */
     .family-title-header {
-      background: linear-gradient(to right, #1e40af, #1e3a8a);
+      background: #087ead !important;
+      color: #fff !important;
       padding: 1rem 1.5rem;
       border-radius: 0.5rem;
       margin-bottom: 1rem;
@@ -227,14 +228,14 @@
     }
     
     .family-title-header h2 {
-      color: #f9fafb !important;
+      color: #fff !important;
       font-size: 1.25rem;
       font-weight: 700;
       margin: 0;
     }
     
     .family-title-header p {
-      color: #e5e7eb !important;
+      color: #fff !important;
       font-size: 0.875rem;
       margin: 0.25rem 0 0 0;
     }
@@ -245,9 +246,53 @@
     }
     
     /* Responsive */
+  /* Mejorar filtros en móvil */
+  /* En PC, filtros en una línea y botón a la derecha */
+  @media (min-width: 641px) {
+    .filter-controls {
+      flex-direction: row !important;
+      align-items: center !important;
+      gap: 1rem !important;
+    }
+    .filter-controls > div {
+      flex-direction: row;
+      align-items: center;
+      width: auto;
+      gap: 0.5rem;
+    }
+    .filter-controls button {
+      width: auto;
+      margin-top: 0;
+      align-self: auto;
+    }
+  }
+  @media (max-width: 640px) {
+    .filter-controls {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 0.75rem !important;
+    }
+    .filter-controls > div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .filter-controls label {
+      margin-bottom: 0.1rem;
+    }
+    .filter-controls select {
+      width: 100%;
+      min-width: 0;
+    }
+    .filter-controls button {
+      width: 100%;
+      margin-top: 0.25rem;
+    }
+  }
     @media (max-width: 1024px) {
       .products-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
       }
     }
     
@@ -333,33 +378,34 @@
       </aside>
     <!-- GRID DE PRODUCTOS -->
     <div class="flex-1">
-
-      <!-- Controles de filtrado y ordenamiento -->
-      <div class="filter-controls" style="flex-wrap: nowrap; align-items: center;">
-        <div class="flex gap-2 items-center">
-          <label for="filterFamily" style="white-space: nowrap;">Filtrar por Serie:</label>
-          <select id="filterFamily" class="filter-select">
-            <option value="all">Todas las series</option>
-            <option value="1430">Serie 1430 - No Gestionados</option>
-            <option value="1830">Serie 1830 - Básicos</option>
-            <option value="1930">Serie 1930 - Gestionables</option>
-            <option value="1960">Serie 1960 - Apilables</option>
-            <option value="secure">Secure Gateway</option>
-          </select>
-        </div>
-        
-        <div class="flex gap-2 items-center">
-          <label for="sortPrice" style="white-space: nowrap;">Ordenar por Precio:</label>
-          <select id="sortPrice" class="filter-select">
-            <option value="default">Orden predeterminado</option>
-            <option value="asc">Menor a Mayor</option>
-            <option value="desc">Mayor a Menor</option>
-          </select>
-        </div>
-
+  <!-- Controles de filtrado y ordenamiento -->
+  <div class="filter-controls">
+    <div class="flex flex-col sm:flex-row gap-2 w-full items-stretch sm:items-center">
+      <div class="flex gap-2 items-center flex-1">
+        <label for="filterFamily" style="white-space: nowrap;">Filtrar por Serie:</label>
+        <select id="filterFamily" class="filter-select">
+          <option value="all">Todas las series</option>
+          <option value="1430">Serie 1430</option>
+          <option value="1830">Serie 1830</option>
+          <option value="1930">Serie 1930</option>
+          <option value="1960">Serie 1960</option>
+          <option value="secure">Secure Gateway</option>
+        </select>
+      </div>
+      <div class="flex gap-2 items-center flex-1">
+        <label for="sortPrice" style="white-space: nowrap;">Ordenar por Precio:</label>
+        <select id="sortPrice" class="filter-select">
+          <option value="default">Orden predeterminado</option>
+          <option value="asc">Menor a Mayor</option>
+          <option value="desc">Mayor a Menor</option>
+        </select>
+      </div>
+      <div class="flex items-center justify-end sm:justify-end flex-none">
         <button id="resetFilters" style="padding: 0.5rem 1rem; background-color: #e5e7eb; border-radius: 0.25rem; font-size: 0.875rem; font-weight: 500; transition: background-color 0.2s; white-space: nowrap;" onmouseover="this.style.backgroundColor='#d1d5db'" onmouseout="this.style.backgroundColor='#e5e7eb'">
           Restablecer filtros
         </button>
+      </div>
+    </div>
       </div>
 
       <!-- Contenedor único para todos los productos -->
@@ -384,7 +430,7 @@
                 <p class="font-bold text-center z-10">JL680A</p>
                 <span class="font-medium text-sm mb-2 z-10">U$ 143.90</span>
                 <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
-                  <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 8p Gigabit 2p SFP 1930</p>
+                  <p class="text-xs text-gray-600 text-center font-bold">Switch HP  administrable  Instant On 1930  con 8 puertos Gigabit  2 puertos para  fibra SFP</p>
                 </div>
               </div>
             </a>
@@ -479,7 +525,7 @@
 
       <!-- FAMILIA ARUBA INSTANT ON 1960 -->
       <div class="mb-6" id="familia1960">
-        <div class="bg-gradient-to-r from-green-700 to-green-800 p-4 rounded-t-lg">
+  <div class="bg-ds3-blue p-4 rounded-t-lg">
           <h2 class="text-xl font-bold mb-2 text-gray-800" style="color: #374151 !important;">Familia Aruba Instant On 1960</h2>
           <p class="text-gray-600 text-sm" style="color: #4b5563 !important;">La serie 1960 es una familia de switches apilables (stacking) con puertos de 10 Gigabit Ethernet (10GBASE-T y SFP+), diseñados para un mayor rendimiento.</p>
         </div>
@@ -550,7 +596,7 @@
 
       <!-- FAMILIA ARUBA INSTANT ON 1830 -->
       <div class="mb-6" id="familia1830">
-        <div class="bg-gradient-to-r from-orange-600 to-orange-700 p-4 rounded-t-lg">
+  <div class="bg-ds3-blue p-4 rounded-t-lg">
           <h2 class="text-xl font-bold mb-2 text-gray-800" style="color: #374151 !important;">Familia Aruba Instant On 1830</h2>
           <p class="text-gray-600 text-sm" style="color: #4b5563 !important;">La serie 1830 representa la opción más básica y económica, ofreciendo switches de Capa 2 con gestión inteligente (Smart Managed) sin la capacidad de apilamiento (stacking).</p>
         </div>
@@ -563,7 +609,43 @@
                 <p class="font-bold text-center z-10">JL810A</p>
                 <span class="font-medium text-sm mb-2 z-10">U$ 165</span>
                 <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
-                  <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 8p Gigabit 1830</p>
+                  <p class="text-xs text-gray-600 text-center font-bold">Switch HP Instant On 1930 con 8 puertos Gigabit - JL680A</p>
+                </div>
+              </div>
+            </a>
+
+            <!-- JL811A - 8P PoE 65W -->
+            <a href="JL811A.html" class="block" data-price="315">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/JL811A_front_small.png" alt="JL811A" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">JL811A</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 315</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">Switch Networking Instant On 1830 8P PoE 65W (JL811A)</p>
+                </div>
+              </div>
+            </a>
+
+            <!-- JL814A - 48P 4SFP -->
+            <a href="JL814A.html" class="block" data-price="599">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/JL814A _front_small.png" alt="JL814A" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">JL814A</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 599</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">Switch Networking Instant On 1830 48P 4SFP</p>
+                </div>
+              </div>
+            </a>
+
+            <!-- JL815A - 48P 4SFP -->
+            <a href="JL815A.html" class="block" data-price="899">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/JL815A_front_small.png" alt="JL815A" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">JL815A</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 899</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">Switch Networking Instant On 1830 48P PoE 4SFP – 48 puertos PoE</p>
                 </div>
               </div>
             </a>
@@ -597,12 +679,45 @@
 
       <!-- FAMILIA ARUBA INSTANT ON 1430 -->
       <div class="mb-6" id="familia1430">
-        <div class="bg-gradient-to-r from-purple-600 to-purple-700 p-4 rounded-t-lg">
+  <div class="bg-gradient-to-r from-blue-800 to-blue-900 p-4 rounded-t-lg">
           <h2 class="text-xl font-bold mb-2 text-gray-800" style="color: #374151 !important;">Familia Aruba Instant On 1430</h2>
           <p class="text-gray-600 text-sm" style="color: #4b5563 !important;">La serie 1430 es la línea de switches no gestionados (unmanaged) de Instant On, ideales para una conectividad plug-and-play simple.</p>
         </div>
         <div class="bg-white border border-t-0 rounded-b-lg p-4">
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- R8R44A - 5p Gigabit -->
+            <a href="R8R44A.html" class="block" data-price="79">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/R8R44A_front_small.png" alt="R8R44A" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">R8R44A</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 79</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">Switch Networking Instant On 1430 con 05 puertos Gigabit</p>
+                </div>
+              </div>
+            </a>
+            <!-- R8R45A - 8p Gigabit -->
+            <a href="R8R45A.html" class="block" data-price="129">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/R8R45A_front_small.png" alt="R8R45A" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">R8R45A</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 129</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">Switch Networking Instant On 1430 con 08 puertos Gigabit</p>
+                </div>
+              </div>
+            </a>
+            <!-- R8R46A - 8p PoE (64W) Gigabit -->
+            <a href="R8R46A.html" class="block" data-price="199">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/R8R46A_front_small.png" alt="R8R46A" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">R8R46A</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 199</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">Switch Networking Instant On 1430 con 08 puertos PoE (64W) Gigabit</p>
+                </div>
+              </div>
+            </a>
             <!-- R8R47A - 16p Gigabit -->
             <a href="R8R47A.html" class="block" data-price="207">
               <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
@@ -610,7 +725,18 @@
                 <p class="font-bold text-center z-10">R8R47A</p>
                 <span class="font-medium text-sm mb-2 z-10">U$ 207</span>
                 <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
-                  <p class="text-xs text-gray-600 text-center font-bold">HPE Networking Instant On Switch 16p Gigabit 1430</p>
+                  <p class="text-xs text-gray-600 text-center font-bold">Switch HP Instant On 1430 con 16 puertos Gigabit - R8R47A</p>
+                </div>
+              </div>
+            </a>
+            <!-- R8R48A - 16p PoE+ (124W) Gigabit -->
+            <a href="R8R48A.html" class="block" data-price="311">
+              <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
+                <img src="../images/R8R48A_front_small.png" alt="R8R48A" class="h-32 object-contain mb-3 z-10">
+                <p class="font-bold text-center z-10">R8R48A</p>
+                <span class="font-medium text-sm mb-2 z-10">U$ 311</span>
+                <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
+                  <p class="text-xs text-gray-600 text-center font-bold">Switch Networking Instant On 1430 con 16 puertos PoE (124W) Gigabit</p>
                 </div>
               </div>
             </a>
@@ -620,7 +746,7 @@
 
       <!-- FAMILIA ARUBA INSTANT ON SECURE GATEWAY -->
       <div class="mb-6" id="familiaSecure">
-        <div class="bg-gradient-to-r from-red-600 to-red-700 p-4 rounded-t-lg">
+  <div class="bg-gradient-to-r from-blue-800 to-blue-900 p-4 rounded-t-lg">
           <h2 class="text-xl font-bold mb-2 text-gray-800" style="color: #374151 !important;">Familia Aruba Instant On Secure Gateway</h2>
           <p class="text-gray-600 text-sm" style="color: #4b5563 !important;">Este es un dispositivo diferente a un switch tradicional. El Secure Gateway combina funciones de firewall/router con conectividad Instant On.</p>
         </div>
@@ -843,11 +969,26 @@
       // Variables para almacenar productos originales
       let allProducts = [];
       const familyInfo = {
-        '1430': { title: 'Familia Aruba Instant On 1430', desc: 'La serie 1430 es la línea de switches no gestionados (unmanaged) de Instant On, ideales para una conectividad plug-and-play simple.' },
-        '1830': { title: 'Familia Aruba Instant On 1830', desc: 'La serie 1830 representa la opción más básica y económica, ofreciendo switches de Capa 2 con gestión inteligente (Smart Managed) sin la capacidad de apilamiento (stacking).' },
-        '1930': { title: 'Familia Aruba Instant On 1930', desc: 'La serie 1930 se enfoca en switches gestionables de capa 2/3 Lite con opciones de 8, 24 y 48 puertos, y puertos SFP/SFP+ de alta velocidad.' },
-        '1960': { title: 'Familia Aruba Instant On 1960', desc: 'La serie 1960 es una familia de switches apilables (stacking) con puertos de 10 Gigabit Ethernet (10GBASE-T y SFP+), diseñados para un mayor rendimiento.' },
-        'secure': { title: 'Familia Aruba Instant On Secure Gateway', desc: 'Este es un dispositivo diferente a un switch tradicional. El Secure Gateway combina funciones de firewall/router con conectividad Instant On.' }
+        '1430': {
+          title: 'Familia Aruba Instant On 1430',
+          desc: 'Switches no gestionados para pequeñas empresas, ideales para una conectividad confiable y sencilla sin configuración avanzada.'
+        },
+        '1830': {
+          title: 'Familia Aruba Instant On 1830',
+          desc: 'Switches smart-managed de Capa 2, económicos y fáciles de administrar localmente o en la nube, pensados para oficinas y comercios.'
+        },
+        '1930': {
+          title: 'Familia Aruba Instant On 1930',
+          desc: 'Switches gestionables de Capa 2+ con PoE y puertos SFP/SFP+, ideales para empresas que requieren mayor rendimiento y flexibilidad.'
+        },
+        '1960': {
+          title: 'Familia Aruba Instant On 1960',
+          desc: 'Switches apilables de alto rendimiento con puertos 10G, pensados para entornos empresariales que demandan escalabilidad y velocidad.'
+        },
+        'secure': {
+          title: 'Familia Aruba Instant On Secure Gateway',
+          desc: 'Gateway de seguridad que integra funciones de firewall, router y VPN para proteger y gestionar la red empresarial.'
+        }
       };
       
       // Función para convertir tarjetas a formato lista
