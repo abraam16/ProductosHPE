@@ -602,7 +602,7 @@
   <footer class="bg-[#0888b4] text-white pt-8 pb-2">
       <div id="footer-content"></div>
       <script>
-  fetch('components/footer.html')
+        fetch('./components/footer.html')
           .then(res => res.text())
           .then(html => {
             document.getElementById('footer-content').innerHTML = html;
