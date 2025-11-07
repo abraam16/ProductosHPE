@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'" />
   <!-- SEO PRINCIPAL -->
   <meta name="description" content="HPE Aruba Instant On 1930 24G Class4 PoE (JL682A), Switch de red HPE Aruba Instant On 1930 con 24 puertos Gigabit PoE y 2 puertos SFP de 1G. Ideal para alimentar dispositivos y expandir redes con facilidad. Precio $307." />
   <meta name="keywords" content="JL682A, HPE Aruba, Instant On 1930, switch, 24 puertos, PoE, SFP, redes empresariales, expansión" />
@@ -711,6 +713,11 @@
       }
       
       // Preload con prioridad alta
+      var criticalImages = [
+        './images/JL682A_front.jpg',
+        './images/JL682A_side.jpg',
+        './images/JL682A_back.jpg'
+      ];
       criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
