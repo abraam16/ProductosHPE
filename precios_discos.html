@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <!-- CSS críticos primero para evitar FOUC -->
-  <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="../assets/css/tailwind.output.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/tailwind.output.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Lista de Precios Discos HPE en Perú. Modelos, características y precios actualizados. DS3 distribuidor oficial HPE Storage." />
   <meta name="keywords" content="Disco HPE Perú, precios discos HPE, HPE disco duro, DS3 comunicaciones distribuidor oficial HPE, discos HPE Lima, discos HPE Perú, discos HPE stock Lima, HPE hard drive" />
@@ -24,7 +24,7 @@
   <!-- Open Graph Meta Tags para Redes Sociales -->
   <meta property="og:title" content="Lista de Precios Discos HPE | DS3 Comunicaciones" />
   <meta property="og:description" content="Lista de Precios Discos HPE en Perú. Modelos, características y precios actualizados." />
-  <meta property="og:image" content="../images/801882-B21_front_small.png" />
+  <meta property="og:image" content="./images/801882-B21_front_small.png" />
   <meta property="og:url" content="https://www.ds3comunicaciones.com/hpe/discos/precios_discos.html" />
   <meta property="og:type" content="product" />
   <meta property="og:site_name" content="DS3 Comunicaciones" />
@@ -33,7 +33,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Lista de Precios Discos HPE" />
   <meta name="twitter:description" content="Lista de Precios Discos HPE en Perú. Modelos, características y precios actualizados." />
-  <meta name="twitter:image" content="../images/801882-B21_front_small.png" />
+  <meta name="twitter:image" content="./images/801882-B21_front_small.png" />
   
   <!-- Meta Tags para Productos -->
   <meta name="product:price:amount" content="89.00" />
@@ -79,16 +79,16 @@
   <meta name="resource-type" content="document" />
   <meta http-equiv="content-language" content="es-PE" />
   <!-- Favicon optimizado con logo DS3 -->
-  <link rel="shortcut icon" type="image/x-icon" href="../images/Logo1.jpg" />
-  <link rel="icon" type="image/x-icon" href="../images/Logo1.jpg" />
+  <link rel="shortcut icon" type="image/x-icon" href="./images/Logo1.jpg" />
+  <link rel="icon" type="image/x-icon" href="./images/Logo1.jpg" />
   <!-- Preload Critical Resources INMEDIATO -->
-  <link rel="preload" href="../images/Logo1.jpg" as="image" fetchpriority="high" />
+  <link rel="preload" href="./images/Logo1.jpg" as="image" fetchpriority="high" />
   <!-- FontAwesome CDN - CARGA NORMAL -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="../images/mikrotik_logo.jpg" type="image/x-icon" rel="shortcut icon" />
-  <link rel="icon" type="image/x-icon" href="../images/mikrotik_logo.jpg" />
+  <link href="./images/mikrotik_logo.jpg" type="image/x-icon" rel="shortcut icon" />
+  <link rel="icon" type="image/x-icon" href="./images/mikrotik_logo.jpg" />
   
   <!-- Preload Critical Resources INMEDIATO -->
   <link rel="preload" href="http://www.ds3comunicaciones.com/belden/images/mikrotik_logo-100x24.png" as="image" />
@@ -314,7 +314,7 @@
   <!-- HEADER DINÁMICO -->
   <div id="header-container"></div>
   <script>
-    fetch('../header.html')
+    fetch('./header.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header-container').innerHTML = data;
@@ -324,7 +324,7 @@
   <div id="submenu-marcas"></div>
   <script>
     // Cargar el submenu de marcas como componente
-    fetch('../components/submenu_marcas.html')
+    fetch('./components/submenu_marcas.html')
       .then(res => res.text())
       .then(html => {
         document.getElementById('submenu-marcas').innerHTML = html;
@@ -337,7 +337,7 @@
       <i class="fa-solid fa-house text-[0.9em]"></i>
     </a>
     <span class="text-gray-400 flex-shrink-0"><i class="fa-solid fa-angle-right text-[0.8em]"></i></span>
-    <a href="../master.html"
+    <a href="./master.html"
       class="flex-shrink-0 hover:underline hover:text-gray-600">
       HPE
     </a>
@@ -363,7 +363,7 @@
       <aside class="hidden lg:block w-full lg:w-1/4 xl:w-1/5 bg-white p-4 rounded-lg shadow-md h-fit sticky top-4">
         <div id="nuestras-marcas"></div>
         <script>
-          fetch('../components/nuestras_marcas.html')
+          fetch('./components/nuestras_marcas.html')
             .then(res => res.text())
             .then(html => {
               document.getElementById('nuestras-marcas').innerHTML = html;
@@ -395,7 +395,7 @@
         <div class="products-grid" id="productsListContainer">
         <a href="801882-B21.html" class="block" data-price="179">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/801882-B21_front_small.png" alt="801882-B21" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/801882-B21_front_small.png" alt="801882-B21" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">801882-B21</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 179</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -405,7 +405,7 @@
         </a>
         <a href="861686-B21.html" class="block" data-price="207">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/861686-B21_front_small.png" alt="861686-B21" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/861686-B21_front_small.png" alt="861686-B21" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">861686-B21</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 207</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -415,7 +415,7 @@
         </a>
         <a href="P04693-B21.html" class="block" data-price="331">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/P04693-B21_front_small.png" alt="P04693-B21" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/P04693-B21_front_small.png" alt="P04693-B21" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">P04693-B21</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 331</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -425,7 +425,7 @@
         </a>
         <a href="861681-B21.html" class="block" data-price="354">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/861681-B21_front_small.png" alt="861681-B21" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/861681-B21_front_small.png" alt="861681-B21" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">861681-B21</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 354</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -435,7 +435,7 @@
         </a>
         <a href="737261-B21.html" class="block" data-price="389">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/737261-B21_front_small.png" alt="737261-B21" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/737261-B21_front_small.png" alt="737261-B21" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">737261-B21</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 389</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -445,7 +445,7 @@
         </a>
         <a href="832514-B21.html" class="block" data-price="471">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/832514-B21_front_small.png" alt="832514-B21" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/832514-B21_front_small.png" alt="832514-B21" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">832514-B21</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 471</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -455,7 +455,7 @@
         </a>
         <a href="801888-B21.html" class="block" data-price="485.49">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/801888-B21_front_small.png" alt="801888-B21" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/801888-B21_front_small.png" alt="801888-B21" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">801888-B21</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 485.49</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -465,7 +465,7 @@
         </a>
         <a href="P18420-B21.html" class="block" data-price="499">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/P18420-B21_front_small.png" alt="P18420-B21" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/P18420-B21_front_small.png" alt="P18420-B21" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">P18420-B21</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 499</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -475,7 +475,7 @@
         </a>
         <a href="872477-B21.html" class="block" data-price="539.59">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/872477-B21_front_small.png" alt="872477-B21" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/872477-B21_front_small.png" alt="872477-B21" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">872477-B21</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 539.59</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -485,7 +485,7 @@
         </a>
         <a href="P28586-B21.html" class="block" data-price="555">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/P28586-B21_front_small.png" alt="P28586-B21" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/P28586-B21_front_small.png" alt="P28586-B21" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">P28586-B21</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 555</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -495,7 +495,7 @@
         </a>
         <a href="P19974-B21.html" class="block" data-price="625">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/P19974-B21_front_small.png" alt="P19974-B21" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/P19974-B21_front_small.png" alt="P19974-B21" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">P19974-B21</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 625</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -505,7 +505,7 @@
         </a>
         <a href="P28352-B21.html" class="block" data-price="937">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/P28352-B21_front_small.png" alt="P28352-B21" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/P28352-B21_front_small.png" alt="P28352-B21" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">P28352-B21</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 937</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -515,7 +515,7 @@
         </a>
         <a href="P18432-B21.html" class="block" data-price="961">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/P18432-B21_front_small.png" alt="P18432-B21" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/P18432-B21_front_small.png" alt="P18432-B21" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">P18432-B21</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 961</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -525,7 +525,7 @@
         </a>
         <a href="P40502-B21.html" class="block" data-price="987">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/P40502-B21_front_small.png" alt="P40502-B21" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/P40502-B21_front_small.png" alt="P40502-B21" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">P40502-B21</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 987</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -535,7 +535,7 @@
         </a>
         <a href="834031-B21.html" class="block" data-price="1,043">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/834031-B21_front_small.png" alt="834031-B21" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/834031-B21_front_small.png" alt="834031-B21" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">834031-B21</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 1,043</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -545,7 +545,7 @@
         </a>
         <a href="P47808-B21.html" class="block" data-price="1,157">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/P47808-B21_front_small.png" alt="P47808-B21" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/P47808-B21_front_small.png" alt="P47808-B21" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">P47808-B21</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 1,157</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -555,7 +555,7 @@
         </a>
         <a href="P37005-B21.html" class="block" data-price="1,857">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/P37005-B21_side_small.png" alt="P37005-B21" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/P37005-B21_side_small.png" alt="P37005-B21" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">P37005-B21</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 1,857</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -565,7 +565,7 @@
         </a>
         <a href="P09153-B21.html" class="block" data-price="2,517">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/P09153-B21_front_small.png" alt="P09153-B21" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/P09153-B21_front_small.png" alt="P09153-B21" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">P09153-B21</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 2,517</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -575,7 +575,7 @@
         </a>
         <a href="K2P89B.html" class="block" data-price="5,155">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/K2P89B_front_small.png" alt="K2P89B" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/K2P89B_front_small.png" alt="K2P89B" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">K2P89B</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 5,155</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -746,7 +746,7 @@
   <footer class="bg-[#0888b4] text-white pt-8 pb-2">
       <div id="footer-content"></div>
       <script>
-        fetch('../components/footer.html')
+        fetch('./components/footer.html')
           .then(res => res.text())
           .then(html => {
             document.getElementById('footer-content').innerHTML = html;
@@ -971,10 +971,10 @@
   </script>
 
 
-    <script src="../assets/js/index.js"></script>
-    <script src="../assets/js/nav.js"></script>
-    <script src="../assets/js/search_mobile.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/nav.js"></script>
+    <script src="./assets/js/search_mobile.js"></script>
 
 </body>
-  <link rel="stylesheet" href="../assets/css/tailwind.output.css">
+  <link rel="stylesheet" href="./assets/css/tailwind.output.css">
 </html> 

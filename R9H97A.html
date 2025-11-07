@@ -24,17 +24,17 @@
   <link rel="alternate" hreflang="es-pe" href="https://www.ds3comunicaciones.com/aruba/R9H97A.html" />
   <link rel="alternate" hreflang="es" href="https://www.ds3comunicaciones.com/aruba/R9H97A.html" />
   <!-- Favicon optimizado con logo DS3 -->
-  <link rel="shortcut icon" type="image/x-icon" href="../images/Logo1.jpg" />
-  <link rel="icon" type="image/x-icon" href="../images/Logo1.jpg" />
+  <link rel="shortcut icon" type="image/x-icon" href="./images/Logo1.jpg" />
+  <link rel="icon" type="image/x-icon" href="./images/Logo1.jpg" />
 
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- CSS personalizado -->
-  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
   
   <!-- Preload Critical Resources INMEDIATO -->
-  <link rel="preload" href="../images/R9H97A_box.webp" as="image" fetchpriority="high" />
-  <link rel="preload" href="../images/R9H97A_side.webp" as="image" />
+  <link rel="preload" href="./images/R9H97A_box.webp" as="image" fetchpriority="high" />
+  <link rel="preload" href="./images/R9H97A_side.webp" as="image" />
   
   <!-- Critical CSS Expandido - EVITA FOUC -->
   <style>
@@ -118,7 +118,7 @@
     "brand": {
       "@type": "Brand",
       "name": "HPE Aruba",
-      "logo": "../images/Logo1.jpg"
+      "logo": "./images/Logo1.jpg"
     },
     "manufacturer": {
       "@type": "Organization",
@@ -144,7 +144,7 @@
   <!-- HEADER DINÁMICO -->
   <div id="header-container"></div>
   <script>
-    fetch('../header.html')
+    fetch('./header.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header-container').innerHTML = data;
@@ -164,7 +164,7 @@
   <div id="submenu-marcas"></div>
   <script>
     // Cargar el submenu de marcas como componente
-    fetch('../components/submenu_marcas.html')
+    fetch('./components/submenu_marcas.html')
       .then(res => res.text())
       .then(html => {
         document.getElementById('submenu-marcas').innerHTML = html;
@@ -177,7 +177,7 @@
       <i class="fa-solid fa-house text-[0.9em]"></i>
     </a>
     <span class="text-gray-400 flex-shrink-0"><i class="fa-solid fa-angle-right text-[0.8em]"></i></span>
-    <a href="../master.html"
+    <a href="./master.html"
       class="flex-shrink-0 hover:underline hover:text-gray-600">
       HPE
     </a>
@@ -199,7 +199,7 @@
       <aside class="hidden lg:block w-full lg:w-1/5 lg:w-1/6 bg-white p-4 rounded-lg shadow-md h-fit sticky top-4">
         <div id="nuestras-marcas"></div>
         <script>
-          fetch('../components/nuestras_marcas.html')
+          fetch('./components/nuestras_marcas.html')
             .then(res => res.text())
             .then(html => {
               document.getElementById('nuestras-marcas').innerHTML = html;
@@ -216,7 +216,7 @@
               <div class="bg-white rounded-lg shadow-sm p-4 border">
                 <div class="aspect-square flex items-center justify-center overflow-hidden">
                   <img id="img_main_mobile" 
-                    src="../images/R9H97A_box.webp" 
+                    src="./images/R9H97A_box.webp" 
                     alt="R9H97A - Vista caja" 
                     class="max-h-full max-w-full object-contain cursor-pointer scale-hover"
                     loading="eager"
@@ -230,8 +230,8 @@
               <!-- Miniaturas -->
               <div class="grid grid-cols-2 gap-3 mt-6">
                 <div class="bg-white rounded-lg shadow-sm p-2 border cursor-pointer border-hover transition-all duration-200"
-                  onclick="changeMainImage('../images/R9H97A_box.webp')">
-                  <img src="../images/R9H97A_box_small.png" 
+                  onclick="changeMainImage('./images/R9H97A_box.webp')">
+                  <img src="./images/R9H97A_box_small.png" 
                     alt="R9H97A vista caja" 
                     class="w-full h-24 object-contain scale-hover" 
                     loading="eager" 
@@ -239,8 +239,8 @@
                     height="96" />
                 </div>
                 <div class="bg-white rounded-lg shadow-sm p-2 border cursor-pointer border-hover transition-all duration-200"
-                  onclick="changeMainImage('../images/R9H97A_side.webp')">
-                  <img src="../images/R9H97A_side_small.png" 
+                  onclick="changeMainImage('./images/R9H97A_side.webp')">
+                  <img src="./images/R9H97A_side_small.png" 
                     alt="R9H97A vista lateral" 
                     class="w-full h-24 object-contain scale-hover" 
                     loading="eager" 
@@ -317,7 +317,7 @@
                 <div>
                   <h2 class="text-lg font-bold text-gray-600 mb-3">Download</h2>
                   <div class="flex flex-wrap gap-3">
-                      <a href="../files/R9H97A_manual.pdf"
+                      <a href="./files/R9H97A_manual.pdf"
                       class="flex items-center gap-2 text-gray-600 hover:text-gray-800 border border-gray-200 rounded-md px-4 py-2 hover:bg-gray-50 transition"
                       target="_blank"
                       aria-label="Descargar manual del HPE Aruba R9H97A en PDF">
@@ -333,7 +333,7 @@
                 <div class="bg-white rounded-lg shadow-sm p-2 border">
                   <div class="aspect-square flex items-center justify-center overflow-hidden">
                     <img id="img_main_desktop" 
-                      src="../images/R9H97A_box.webp" 
+                      src="./images/R9H97A_box.webp" 
                       alt="R9H97A - Vista caja" 
                       class="max-h-full max-w-full object-contain cursor-pointer scale-hover"
                       loading="eager"
@@ -347,8 +347,8 @@
                 <!-- Miniaturas -->
                 <div class="grid grid-cols-2 gap-3 mt-6">
                   <div class="bg-white rounded-lg shadow-sm p-2 border cursor-pointer border-hover transition-all duration-200"
-                    onclick="changeMainImage('../images/R9H97A_box.webp')">
-                    <img src="../images/R9H97A_box_small.png" 
+                    onclick="changeMainImage('./images/R9H97A_box.webp')">
+                    <img src="./images/R9H97A_box_small.png" 
                       alt="R9H97A vista caja" 
                       class="w-full h-24 object-contain scale-hover" 
                       loading="eager" 
@@ -356,8 +356,8 @@
                       height="96" />
                   </div>
                   <div class="bg-white rounded-lg shadow-sm p-2 border cursor-pointer border-hover transition-all duration-200"
-                    onclick="changeMainImage('../images/R9H97A_side.webp')">
-                    <img src="../images/R9H97A_side_small.png" 
+                    onclick="changeMainImage('./images/R9H97A_side.webp')">
+                    <img src="./images/R9H97A_side_small.png" 
                       alt="R9H97A vista lateral" 
                       class="w-full h-24 object-contain scale-hover" 
                       loading="eager" 
@@ -396,7 +396,7 @@
       <aside class="hidden lg:block w-full max-w-xs lg:w-1/4 xl:w-1/5 bg-white p-2 rounded-lg shadow-md h-[80vh] overflow-y-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
         <div id="lista-precios-marcas"></div>
         <script>
-          fetch('../components/lista_precios_marcas.html')
+          fetch('./components/lista_precios_marcas.html')
             .then(res => res.text())
             .then(html => {
               document.getElementById('lista-precios-marcas').innerHTML = html;
@@ -418,7 +418,7 @@
         <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow flex flex-col h-full">
           <div class="p-4 text-center flex flex-col h-full">
             <div class="h-32 flex items-center justify-center mb-4 bg-gray-50 rounded">
-              <img src="../images/716191-B21_front_small.png" 
+              <img src="./images/716191-B21_front_small.png" 
                    alt="716191-B21" 
                    class="max-h-full max-w-full object-contain" 
                    loading="eager" />
@@ -437,7 +437,7 @@
         <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow flex flex-col h-full">
           <div class="p-4 text-center flex flex-col h-full">
             <div class="h-32 flex items-center justify-center mb-4 bg-gray-50 rounded">
-              <img src="../images/726537-B21_front_small.png" 
+              <img src="./images/726537-B21_front_small.png" 
                    alt="726537-B21" 
                    class="max-h-full max-w-full object-contain" 
                    loading="eager" />
@@ -456,7 +456,7 @@
         <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow flex flex-col h-full">
           <div class="p-4 text-center flex flex-col h-full">
             <div class="h-32 flex items-center justify-center mb-4 bg-gray-50 rounded">
-              <img src="../images/734807-B21_front_small.png" 
+              <img src="./images/734807-B21_front_small.png" 
                    alt="734807-B21" 
                    class="max-h-full max-w-full object-contain" 
                    loading="eager" />
@@ -475,7 +475,7 @@
         <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow flex flex-col h-full">
           <div class="p-4 text-center flex flex-col h-full">
             <div class="h-32 flex items-center justify-center mb-4 bg-gray-50 rounded">
-              <img src="../images/804326-B21_front_small.png" 
+              <img src="./images/804326-B21_front_small.png" 
                    alt="804326-B21" 
                    class="max-h-full max-w-full object-contain" 
                    loading="eager" />
@@ -498,7 +498,7 @@
   <footer class="bg-[#0888b4] text-white pt-8 pb-2">
       <div id="footer-content"></div>
       <script>
-        fetch('../components/footer.html')
+        fetch('./components/footer.html')
           .then(res => res.text())
           .then(html => {
             document.getElementById('footer-content').innerHTML = html;
@@ -513,7 +513,7 @@
   </div>
 
   <!-- Enlace a Tailwind CSS compilado localmente -->
-  <link rel="stylesheet" href="../assets/css/tailwind.output.css">
+  <link rel="stylesheet" href="./assets/css/tailwind.output.css">
   <!-- JavaScript Optimizado para Máximo Rendimiento -->
   <script>
     // Cache de elementos DOM para mejor rendimiento
@@ -635,9 +635,9 @@
     }, { passive: true });
   </script>
 
-  <script src="../assets/js/index.js"></script>
-  <script src="../assets/js/nav.js"></script>
-  <script src="../assets/js/search_mobile.js"></script>
+  <script src="./assets/js/index.js"></script>
+  <script src="./assets/js/nav.js"></script>
+  <script src="./assets/js/search_mobile.js"></script>
 
 <script>
 function changeMainImage(src) {

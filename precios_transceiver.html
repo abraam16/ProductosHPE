@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <!-- CSS críticos primero para evitar FOUC -->
-  <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="../assets/css/tailwind.output.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/tailwind.output.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Lista de Precios Transceivers HPE en Perú. Modelos, características y precios actualizados. DS3 distribuidor oficial HPE Networking y Transceivers." />
   <meta name="keywords" content="Transceiver HPE Perú, precios transceivers HPE, HPE SFP, DS3 comunicaciones distribuidor oficial HPE, transceivers HPE Lima, transceivers HPE Perú, transceivers HPE stock Lima, HPE SFP+" />
@@ -24,7 +24,7 @@
   <!-- Open Graph Meta Tags para Redes Sociales -->
   <meta property="og:title" content="Lista de Precios Transceivers HPE | DS3 Comunicaciones" />
   <meta property="og:description" content="Lista de Precios Transceivers HPE en Perú. Modelos, características y precios actualizados." />
-  <meta property="og:image" content="../images/J4858D_front_small.png" />
+  <meta property="og:image" content="./images/J4858D_front_small.png" />
   <meta property="og:url" content="https://www.ds3comunicaciones.com/hpe/transceiver/precios_transceiver.html" />
   <meta property="og:type" content="product" />
   <meta property="og:site_name" content="DS3 Comunicaciones" />
@@ -33,7 +33,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Lista de Precios Transceivers HPE" />
   <meta name="twitter:description" content="Lista de Precios Transceivers HPE en Perú. Modelos, características y precios actualizados." />
-  <meta name="twitter:image" content="../images/J4858D_front_small.png" />
+  <meta name="twitter:image" content="./images/J4858D_front_small.png" />
   
   <!-- Meta Tags para Productos -->
   <meta name="product:price:amount" content="89.00" />
@@ -79,16 +79,16 @@
   <meta name="resource-type" content="document" />
   <meta http-equiv="content-language" content="es-PE" />
   <!-- Favicon optimizado con logo DS3 -->
-  <link rel="shortcut icon" type="image/x-icon" href="../images/Logo1.jpg" />
-  <link rel="icon" type="image/x-icon" href="../images/Logo1.jpg" />
+  <link rel="shortcut icon" type="image/x-icon" href="./images/Logo1.jpg" />
+  <link rel="icon" type="image/x-icon" href="./images/Logo1.jpg" />
   <!-- Preload Critical Resources INMEDIATO -->
-  <link rel="preload" href="../images/Logo1.jpg" as="image" fetchpriority="high" />
+  <link rel="preload" href="./images/Logo1.jpg" as="image" fetchpriority="high" />
   <!-- FontAwesome CDN - CARGA NORMAL -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="../images/mikrotik_logo.jpg" type="image/x-icon" rel="shortcut icon" />
-  <link rel="icon" type="image/x-icon" href="../images/mikrotik_logo.jpg" />
+  <link href="./images/mikrotik_logo.jpg" type="image/x-icon" rel="shortcut icon" />
+  <link rel="icon" type="image/x-icon" href="./images/mikrotik_logo.jpg" />
   
   <!-- Preload Critical Resources INMEDIATO -->
   <link rel="preload" href="http://www.ds3comunicaciones.com/belden/images/mikrotik_logo-100x24.png" as="image" />
@@ -314,7 +314,7 @@
   <!-- HEADER DINÁMICO -->
   <div id="header-container"></div>
   <script>
-    fetch('../header.html')
+    fetch('./header.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header-container').innerHTML = data;
@@ -324,7 +324,7 @@
   <div id="submenu-marcas"></div>
   <script>
     // Cargar el submenu de marcas como componente
-    fetch('../components/submenu_marcas.html')
+    fetch('./components/submenu_marcas.html')
       .then(res => res.text())
       .then(html => {
         document.getElementById('submenu-marcas').innerHTML = html;
@@ -337,7 +337,7 @@
       <i class="fa-solid fa-house text-[0.9em]"></i>
     </a>
     <span class="text-gray-400 flex-shrink-0"><i class="fa-solid fa-angle-right text-[0.8em]"></i></span>
-    <a href="../master.html"
+    <a href="./master.html"
       class="flex-shrink-0 hover:underline hover:text-gray-600">
       HPE
     </a>
@@ -363,7 +363,7 @@
       <aside class="hidden lg:block w-full lg:w-1/4 xl:w-1/5 bg-white p-4 rounded-lg shadow-md h-fit sticky top-4">
         <div id="nuestras-marcas"></div>
         <script>
-          fetch('../components/nuestras_marcas.html')
+          fetch('./components/nuestras_marcas.html')
             .then(res => res.text())
             .then(html => {
               document.getElementById('nuestras-marcas').innerHTML = html;
@@ -395,7 +395,7 @@
         <div class="products-grid" id="productsListContainer">
         <a href="AJ835A.html" class="block" data-price="41">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/AJ835A_front_small.png" alt="AJ835A" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/AJ835A_front_small.png" alt="AJ835A" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">AJ835A</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 41</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -405,7 +405,7 @@
         </a>
         <a href="AJ836A.html" class="block" data-price="59">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/AJ836A_front_small.png" alt="AJ836A" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/AJ836A_front_small.png" alt="AJ836A" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">AJ836A</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 59</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -415,7 +415,7 @@
         </a>
         <a href="QK734A.html" class="block" data-price="71">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/QK734A_front_small.png" alt="QK734A" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/QK734A_front_small.png" alt="QK734A" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">QK734A</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 71</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -425,7 +425,7 @@
         </a>
         <a href="JD089B.html" class="block" data-price="123">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JD089B_front_small.png" alt="JD089B" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/JD089B_front_small.png" alt="JD089B" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">JD089B</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 123</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -435,7 +435,7 @@
         </a>
         <a href="J4858D.html" class="block" data-price="281.90">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/J4858D_top_small.png" alt="J4858D" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/J4858D_top_small.png" alt="J4858D" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">J4858D</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 281.90</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -445,7 +445,7 @@
         </a>
         <a href="455883-B21.html" class="block" data-price="551">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/455883-B21_front_small.png" alt="455883-B21" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/455883-B21_front_small.png" alt="455883-B21" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">455883-B21</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 551</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -455,7 +455,7 @@
         </a>
         <a href="JL563A.html" class="block" data-price="612">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JL563A_front_small.png" alt="JL563A" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/JL563A_front_small.png" alt="JL563A" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">JL563A</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 612</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -465,7 +465,7 @@
         </a>
         <a href="JG330A.html" class="block" data-price="629.90">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JG330A_front_small.png" alt="JG330A" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/JG330A_front_small.png" alt="JG330A" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">JG330A</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 629.90</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -475,7 +475,7 @@
         </a>
         <a href="J9150D.html" class="block" data-price="964">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/J9150D_front_small.png" alt="J9150D" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/J9150D_front_small.png" alt="J9150D" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">J9150D</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 964</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -485,7 +485,7 @@
         </a>
         <a href="JL485A.html" class="block" data-price="consultar">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JL485A_front_small.png" alt="JL485A" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/JL485A_front_small.png" alt="JL485A" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">JL485A</p>
             <span class="font-medium text-sm mb-2 z-10">U$ consultar</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -495,7 +495,7 @@
         </a>
         <a href="J9283D.html" class="block" data-price="165">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/J9283D_front_small.png" alt="J9283D" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/J9283D_front_small.png" alt="J9283D" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">J9283D</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 165</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -505,7 +505,7 @@
         </a>
         <a href="R8Q74A.html" class="block" data-price="65">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/R8Q74A_front_small.png" alt="R8Q74A" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/R8Q74A_front_small.png" alt="R8Q74A" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">R8Q74A</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 65</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -515,7 +515,7 @@
         </a>
         <a href="JD096C.html" class="block" data-price="131">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JD096C_front_small.png" alt="JD096C" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/JD096C_front_small.png" alt="JD096C" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">JD096C</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 131</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -525,7 +525,7 @@
         </a>
         <a href="S2P30A.html" class="block" data-price="567">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/S2P30A_front_small.png" alt="S2P30A" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/S2P30A_front_small.png" alt="S2P30A" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">S2P30A</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 567</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -535,7 +535,7 @@
         </a>
         <a href="J9281D.html" class="block" data-price="245">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/J9281D_front_small.png" alt="J9281D" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/J9281D_front_small.png" alt="J9281D" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">J9281D</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 245</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -545,7 +545,7 @@
         </a>
         <a href="R0Z25A.html" class="block" data-price="157">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/R0Z25A_front_small.png" alt="R0Z25A" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/R0Z25A_front_small.png" alt="R0Z25A" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">R0Z25A</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 157</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -555,7 +555,7 @@
         </a>
         <a href="R9D18A.html" class="block" data-price="119">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/R9D18A_front_small.png" alt="R9D18A" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/R9D18A_front_small.png" alt="R9D18A" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">R9D18A</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 119</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -565,7 +565,7 @@
         </a>
         <a href="JD092B.html" class="block" data-price="861">
         <div class="bg-white border rounded-lg shadow-sm hover:shadow-lg transition p-4 flex flex-col items-center relative group overflow-hidden ccr-card">
-            <img src="../images/JD092B_front_small.png" alt="JD092B" class="h-32 object-contain mb-3 z-10">
+            <img src="./images/JD092B_front_small.png" alt="JD092B" class="h-32 object-contain mb-3 z-10">
             <p class="font-bold text-center z-10">JD092B</p>
             <span class="font-medium text-sm mb-2 z-10">U$ 861</span>
             <div class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 hidden sm:flex">
@@ -736,7 +736,7 @@
   <footer class="bg-[#0888b4] text-white pt-8 pb-2">
       <div id="footer-content"></div>
       <script>
-        fetch('../components/footer.html')
+        fetch('./components/footer.html')
           .then(res => res.text())
           .then(html => {
             document.getElementById('footer-content').innerHTML = html;
@@ -961,10 +961,10 @@
   </script>
 
 
-    <script src="../assets/js/index.js"></script>
-    <script src="../assets/js/nav.js"></script>
-    <script src="../assets/js/search_mobile.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/nav.js"></script>
+    <script src="./assets/js/search_mobile.js"></script>
 
 </body>
-  <link rel="stylesheet" href="../assets/css/tailwind.output.css">
+  <link rel="stylesheet" href="./assets/css/tailwind.output.css">
 </html> 
