@@ -27,6 +27,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="./images/Logo1.jpg" />
   <link rel="icon" type="image/x-icon" href="./images/Logo1.jpg" />
 
+
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- CSS personalizado -->
@@ -110,7 +111,7 @@
     "name": "HPE Aruba Instant On 1930 24G Class4 PoE (JL682A) - Switch de red 24 puertos Gigabit PoE, 2 SFP 1G",
     "model": "JL682A",
     "image": [
-      "[AQUÍ VA TU IMAGEN DE ARUBA]"
+      "./images/JL682A_front.jpg",
     ],
     "description": "HPE Aruba Instant On 1930 24G Class4 PoE (JL682A), Switch de red HPE Aruba Instant On 1930 con 24 puertos Gigabit PoE y 2 puertos SFP de 1G. Ideal para alimentar dispositivos y expandir redes con facilidad.",
     "sku": "JL682A",
@@ -145,7 +146,7 @@
   <!-- HEADER DINÁMICO -->
   <div id="header-container"></div>
   <script>
-  fetch('header.html')
+    fetch('./header.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header-container').innerHTML = data;
@@ -165,7 +166,7 @@
   <div id="submenu-marcas"></div>
   <script>
     // Cargar el submenu de marcas como componente
-  fetch('components/submenu_marcas.html')
+    fetch('./components/submenu_marcas.html')
       .then(res => res.text())
       .then(html => {
         document.getElementById('submenu-marcas').innerHTML = html;
@@ -200,18 +201,19 @@
       <aside class="hidden lg:block w-full lg:w-1/5 lg:w-1/6 bg-white p-4 rounded-lg shadow-md h-fit sticky top-4">
         <div id="nuestras-marcas"></div>
         <script>
-          fetch('components/nuestras_marcas.html')
+          fetch('./components/nuestras_marcas.html')
             .then(res => res.text())
             .then(html => {
               document.getElementById('nuestras-marcas').innerHTML = html;
             });
         </script>
       </aside>
+
         <!-- CONTENIDO PRINCIPAL DE PRODUCTOS -->
         <div class="w-full lg:w-4/6 bg-white rounded-lg shadow">
           <div class="mx-auto max-w-[1200px] w-full p-6">
             
-            <!-- Imágenes del producto (MOBILE FIRST) -->
+<!-- Imágenes del producto (MOBILE FIRST) -->
             <div class="block lg:hidden mb-6">
               <!-- Imagen principal optimizada -->
               <div class="bg-white rounded-lg shadow-sm p-4 border">
@@ -280,7 +282,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
               <!-- COLUMNA IZQUIERDA: Información del producto -->
               <div class="space-y-6">
-                <!-- Aplicaciones -->
+<!-- Aplicaciones -->
                 <div>
                   <h2 class="text-lg font-bold text-gray-600 mb-3">Aplicaciones</h2>
                   <ul class="list-none pl-0 space-y-2 text-gray-700">
@@ -337,7 +339,7 @@
               </div>
               <!-- COLUMNA DERECHA: Imágenes del producto (solo desktop) -->
               <div class="hidden lg:block self-start" style="margin-top:-72px;">
-                <!-- Imagen principal optimizada -->
+<!-- Imagen principal optimizada -->
                 <div class="bg-white rounded-lg shadow-sm p-2 border">
                   <div class="aspect-square flex items-center justify-center overflow-hidden">
                     <img id="img_main_desktop" 
@@ -392,7 +394,7 @@
             </p>
           </div>
 
-          <!-- ESPECIFICACIONES TÉCNICAS -->
+         <!-- ESPECIFICACIONES TÉCNICAS -->
           <div class="mt-8">
             <h2 class="text-xl font-bold text-gray-600 mb-4">Especificaciones técnicas</h2>
             <!-- Tabla responsive de especificaciones -->
@@ -446,7 +448,7 @@
             </div>
           </div>
 
-          <!-- RESULTADOS DEL RENDIMIENTO -->
+        <!-- RESULTADOS DEL RENDIMIENTO -->
           <div class="mt-8">
             <h2 class="text-xl font-bold text-gray-800 mb-4">Resultados del Rendimiento</h2>
             <div class="overflow-x-auto mb-6">
@@ -599,7 +601,7 @@
   <div style="height: 32px;"></div>
   </main>
     <!-- FOOTER (componente) -->
-  <footer class="footer-ds3 bg-[#0888b4] text-white pt-8 pb-2">
+  <footer class="bg-[#0888b4] text-white pt-8 pb-2">
       <div id="footer-content"></div>
       <script>
         fetch('./components/footer.html')
@@ -709,11 +711,6 @@
       }
       
       // Preload con prioridad alta
-      var criticalImages = [
-  './images/JL682A_front.jpg',
-  './images/JL682A_side.jpg',
-  './images/JL682A_back.jpg'
-      ];
       criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
