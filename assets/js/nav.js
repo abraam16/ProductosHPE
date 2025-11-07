@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-fetch('../components/nav_mobile.html')
+fetch('/components/nav_mobile.html')
     .then(response => response.text())
     .then(html => {
       const tempDiv = document.createElement('div');

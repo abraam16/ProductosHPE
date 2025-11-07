@@ -24,18 +24,18 @@
   <link rel="alternate" hreflang="es-pe" href="https://www.ds3comunicaciones.com/aruba/JL682A.html" />
   <link rel="alternate" hreflang="es" href="https://www.ds3comunicaciones.com/aruba/JL682A.html" />
   <!-- Favicon optimizado con logo DS3 -->
-  <link rel="shortcut icon" type="image/x-icon" href="./images/Logo1.jpg" />
-  <link rel="icon" type="image/x-icon" href="./images/Logo1.jpg" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/Logo1.jpg" />
+  <link rel="icon" type="image/x-icon" href="/images/Logo1.jpg" />
 
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- CSS personalizado -->
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
   
   <!-- Preload Critical Resources INMEDIATO -->
-  <link rel="preload" href="./images/JL682A_front.jpg" as="image" fetchpriority="high" />
-  <link rel="preload" href="./images/JL682A_side.jpg" as="image" />
-  <link rel="preload" href="./images/JL682A_back.jpg" as="image" />
+  <link rel="preload" href="/images/JL682A_front.jpg" as="image" fetchpriority="high" />
+  <link rel="preload" href="/images/JL682A_side.jpg" as="image" />
+  <link rel="preload" href="/images/JL682A_back.jpg" as="image" />
   
   <!-- Critical CSS Expandido - EVITA FOUC -->
   <style>
@@ -602,7 +602,7 @@
   <footer class="bg-[#0888b4] text-white pt-8 pb-2">
       <div id="footer-content"></div>
       <script>
-        fetch('./components/footer.html')
+  fetch('/components/footer.html')
           .then(res => res.text())
           .then(html => {
             document.getElementById('footer-content').innerHTML = html;
@@ -618,7 +618,7 @@
   </div>
 
   <!-- Enlace a Tailwind CSS compilado localmente -->
-  <link rel="stylesheet" href="./assets/css/tailwind.output.css">
+  <link rel="stylesheet" href="/assets/css/tailwind.output.css">
   <!-- JavaScript Optimizado para Máximo Rendimiento -->
   <script>
     // Cache de elementos DOM para mejor rendimiento
@@ -709,6 +709,11 @@
       }
       
       // Preload con prioridad alta
+      var criticalImages = [
+        '/images/JL682A_front.jpg',
+        '/images/JL682A_side.jpg',
+        '/images/JL682A_back.jpg'
+      ];
       criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
@@ -741,8 +746,8 @@
   </script>
 
   <script src="./assets/js/index.js"></script>
-  <script src="./assets/js/nav.js"></script>
-  <script src="./assets/js/search_mobile.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/search_mobile.js"></script>
 
 <script>
 function changeMainImage(src) {
